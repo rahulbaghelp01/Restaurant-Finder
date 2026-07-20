@@ -1,0 +1,89 @@
+/* ...existing code... */
+
+@font-face {
+  font-family: "Lora";
+  src: url("./assests/fonts/Lora/static/Lora-Regular.ttf") format("truetype");
+}
+
+:root {
+  --font-body: "Lora", serif;
+
+  /* Backgrounds */
+  --bg-color: #ADE1FB;
+  --surface: #266CA9;
+
+  /* Brand Colors */
+  --primary: #0F2573;
+  --secondary: #041D56;
+
+  /* Text */
+  --text-light: #FFFFFF;
+  --text-dark: #01082D;
+
+  /* Borders */
+  --border: #266CA9;
+
+  /* Optional */
+  --shadow: rgba(1, 8, 45, 0.15);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  overflow-x: hidden;
+}
+
+
+
+.navbar{
+  display:flex;
+  justify-content: space-between;
+  margin:0.75rem;
+}
+
+.left-side{
+  display:flex;
+}
+
+.right-side{
+  display:flex;
+  gap:1rem;
+  margin-right: 0.75rem;
+  margin : 0.75 rem, 0.75rem ;
+}
+ 
+
+.sidebar-header{
+  display:flex;
+  margin-left :0.75rem;
+  gap:1rem;
+}
+
+.sidebar-drawer{
+  margin-left:2.75rem;
+}
+
+.profile-section{
+  position:relative;
+   
+}
+
+.login-or-signup{
+  display:flex;
+  flex-direction:column;
+  position :absolute;
+  padding:0.75rem;
+  margin-top:0.75rem;
+   right:0.1rem;
+    
+}
+
+.sign-up,.login{
+  text-wrap: nowrap;
+   
+}

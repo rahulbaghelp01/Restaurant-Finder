@@ -1,14 +1,15 @@
+import Home from "./pages/Home.jsx";
+import Favourites from "./pages/Favourites.jsx";
+import "./App.css";
+import { Routes, Route } from "react-router-dom";
 
-import './App.css'
-
-
-
- export default function App(){
+export default function App() {
   return (
-    <div>
-
-    </div>
-  )
- }
+    <Routes>
+      <Route path="/" element={<Home />} />
+      <Route path="/Favourites" element={<Favourites />} />
+    </Routes>
+  );
+}
 
   
