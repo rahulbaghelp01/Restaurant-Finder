@@ -7,6 +7,8 @@ import FavouritesContext, {
   FavouritesProvider
 } from "./contexts/FavouritesContext.jsx";
 
+
+
 createRoot(document.getElementById('root')).render(
   <StrictMode>
     <BrowserRouter>

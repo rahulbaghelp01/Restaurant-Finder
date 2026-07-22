@@ -1,26 +1,23 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import ZonelyLogo from "../assests/fonts/Lora/logo";
 
 export default function Sidebar() {
-  const [openOrClose, setOpenOrClose] = useState(false);
+   
 
   const handleClick = () => setOpenOrClose(!openOrClose);
 
   return (
     <div className="sidebar">
-      <div className="sidebar-header">
-        <button onClick={handleClick} aria-label="Toggle sidebar">☰</button>
-        <h2>DishDash</h2>
+      <div className="flex gap-0.5">
+         
+        <ZonelyLogo className="cursor-pointer transition-transform duration-300
+        hover:-translate-y-1" onClick={handleClick} width={60} height={60} />
+        <Link to="/ " className="pt-2 text-3xl font-bold tracking-tight [text-shadow:0_2px_4px_rgba(0,0,0,0.25)]
+        transition-transform duration-300
+        hover:-translate-y-1">Zonely</Link>
       </div>
-      { openOrClose ?
-      <div className="sidebar-drawer">
-        <Link to="/Favourites">Favourites</Link>
-        <h3>Comments</h3>
-        <h3>Settings</h3>
-        <h3>Log Out</h3>
-      </div> : ""
-      }
-    </div>
-  );
+      </div>
+   )
 }
 

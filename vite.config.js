@@ -1,21 +1,24 @@
-import { defineConfig } from 'vite'
-import react from '@vitejs/plugin-react'
+import { defineConfig } from "vite";
+import react from "@vitejs/plugin-react";
+import tailwindcss from "@tailwindcss/vite";
 
-// https://vite.dev/config/
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    tailwindcss(),
+  ],
   server: {
     proxy: {
-      '/api': {
-        target: 'https://places-api.foursquare.com',
+      "/api": {
+        target: "https://places-api.foursquare.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/api/, ''),
+        rewrite: (path) => path.replace(/^\/api/, ""),
       },
-      '/google': {
-        target: 'https://maps.googleapis.com',
+      "/google": {
+        target: "https://maps.googleapis.com",
         changeOrigin: true,
-        rewrite: (path) => path.replace(/^\/google/, ''),
-      }
-    }
-  }
+        rewrite: (path) => path.replace(/^\/google/, ""),
+      },
+    },
+  },
 });

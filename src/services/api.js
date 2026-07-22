@@ -25,6 +25,10 @@ async function testGooglePlacesApi(searchQuery = "places") {
 
     const data = await response.json();
 
+    console.log(data.places);
+console.log(data.places[0]);
+console.log(data.places[0].photos);
+
     if (!data.places) {
       console.warn("⚠️ No places found or demo key quota exceeded.");
       console.log("Raw Response:", data);
